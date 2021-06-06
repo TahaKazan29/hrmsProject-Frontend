@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router';
+import Home from './pages/Home';
+import JobPosting from './pages/JobPosting';
+import JobPostDetail from './pages/JobPostDetail';
+import React, { Component} from "react";
+import JobPostService from "./services/jobPostService"
+import Auth from './layouts/Auth/Auth';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let postService = new JobPostService();
+export default class App extends Component{
+  state = {
+    posts:[],
+    currentPost:{}
+  }
+
+  componentDidMount() {
+    this.getPosts();
+  }
+
+  getPosts(){
+    postService.getPosts().then((result) => this.setState({posts:result.data.data}));
+  }
+
+  changePost = (post) => {
+    this.setState({currentPost:post})
+  }
+
+
+  render(){
+    return (
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/jobPostings" exact render={props => (
+            <JobPosting {...props} posts={this.state.posts} changePost={this.changePost}></JobPosting>
+          )}></Route>
+          <Route path="/jobPost/:postId" exact render={props => (
+            <JobPostDetail {...props} currentPost={this.state.currentPost}></JobPostDetail>
+          )}/>
+        <Route path="/auth" component={Auth} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
-export default App;
+//export default App;
