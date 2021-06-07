@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/assets
-/tailwind.config.cs
 /.pnp
 .pnp.js
 
