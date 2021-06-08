@@ -1,6 +1,7 @@
 import React from "react";
 import IndexDropdown from "../Dropdowns/IndexDropdown.jsx";
 import { Link } from "react-router-dom";
+import RegisterDropdown from "../Dropdowns/RegisterDropdown.jsx";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -22,6 +23,7 @@ export default function Navbar(props) {
             >
               <i className="fas fa-bars"></i>
             </button>
+            
           </div>
           <div
             className={
@@ -31,31 +33,36 @@ export default function Navbar(props) {
             id="example-navbar-warning"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li className="flex items-center">
+                <Link
+                className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  to="/cv">
+                    <div className="flex flex-wrap">
+                      <i className="far fa-address-card pt-1" ></i>
+                      <p className="pl-2">ÖZGEÇMİŞ OLUŞTUR</p>
+                    </div>
+                </Link>
+              </li>
               <li className="flex items-center">
                 <Link
                   to="/auth/login"
                   className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   type="button"
                 >
-                  Oturum Aç
+                  <div className="flex flex-wrap">
+                      <i class="fas fa-sign-in-alt pt-1"></i>
+                      <p className="pl-2">Oturum Aç</p>
+                    </div>
                 </Link>
               </li>
               <li className="flex items-center">
-              <Link
-                  to="/auth/register"
-                  className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  Kayıt Ol
-                  </Link>
+                <RegisterDropdown />
               </li>
-              {/* <li className="flex items-center">
-                <IndexDropdown />
-              </li> */}
             </ul>
           </div>
         </div>
       </nav>
+      
     </>
   );
 }

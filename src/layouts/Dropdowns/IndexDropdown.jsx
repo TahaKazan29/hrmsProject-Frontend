@@ -43,25 +43,21 @@ const IndexDropdown = () => {
           Admin Layout
         </span>
         <p
-        //   to="/admin/dashboard"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Dashboard
         </p>
         <p
-        //   to="/admin/settings"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Settings
         </p>
         <p
-        //   to="/admin/tables"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Tables
         </p>
         <p
-        //   to="/admin/maps"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Maps
@@ -75,13 +71,11 @@ const IndexDropdown = () => {
           Auth Layout
         </span>
         <p
-        //   to="/auth/login"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Login
         </p>
         <p
-        //   to="/auth/register"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Register
@@ -95,13 +89,11 @@ const IndexDropdown = () => {
           No Layout
         </span>
         <p
-        //   to="/landing"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Landing
         </p>
         <p
-        //   to="/profile"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Profile
