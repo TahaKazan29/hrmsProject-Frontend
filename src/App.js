@@ -6,6 +6,7 @@ import React, { Component} from "react";
 import JobPostService from "./services/jobPostService"
 import Auth from './layouts/Auth/Auth';
 import Resume from './pages/Resume';
+import ResumeExperiences from './pages/ResumeExperiences';
 
 let postService = new JobPostService();
 export default class App extends Component{
@@ -40,6 +41,7 @@ export default class App extends Component{
           )}/>
         <Route path="/auth" component={Auth} />
         <Route path="/cv" component={Resume} />
+        <Route path="/resumeExperiences" component={ResumeExperiences} />
         </Switch>
       </div>
     );
