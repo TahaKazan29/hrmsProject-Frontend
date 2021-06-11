@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Human Resources Management System
 
 ![dd](https://user-images.githubusercontent.com/74051388/121268922-8b892480-c8c7-11eb-844a-438c297bb6a0.png)
 
