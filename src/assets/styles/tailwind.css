@@ -2203,6 +2203,10 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
   position: fixed;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .absolute {
   position: absolute;
 }
@@ -2221,6 +2225,10 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-1 {
+  bottom: 1px;
 }
 
 .left-0 {

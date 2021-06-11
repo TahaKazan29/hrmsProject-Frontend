@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom"
 export default function FooterSmall(props) {
   return (
     <>
@@ -21,32 +21,40 @@ export default function FooterSmall(props) {
             <div className="w-full md:w-8/12 px-4">
               <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                 <li>
-                  <a
-                    className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                  >
-                    İnsan Kaynakları
-                  </a>
+                  <Link to="">
+                    <p
+                      className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
+                    >
+                      İnsan Kaynakları
+                    </p>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                  >
-                    Hakkımızda
-                  </a>
+                  <Link to="">
+                    <p
+                      className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
+                    >
+                      Hakkımızda
+                    </p>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link to="">
+                  <p
                     className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
                   >
                     Blog
-                  </a>
+                  </p>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                  >
-                    Lisans
-                  </a>
+                  <Link to="">
+                    <p
+                      className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
+                    >
+                      Lisans
+                    </p>
+                  </Link>
                 </li>
               </ul>
             </div>

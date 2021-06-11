@@ -18,7 +18,7 @@ const RegisterDropdown = () => {
   return (
     <>
       <a
-        className="bg-lightBlue-500  text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-lightBlue-500  text-white active:bg-lightBlue-600 font-bold text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         href="#pablo"
         ref={btnDropdownRef}
         onClick={(e) => {
@@ -41,7 +41,7 @@ const RegisterDropdown = () => {
       >
         <Link 
         to="/auth/jobSeekerForRegister"
-        className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+        className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold  text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           <div className="flex flex-wrap">
           <i class="fas fa-user pt-1"></i>
           <p className="pl-2">İş Arayan</p>

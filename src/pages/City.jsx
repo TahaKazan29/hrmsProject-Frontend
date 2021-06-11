@@ -8,7 +8,7 @@ export default function City() {
     useEffect(() => {
         let cityService = new CityService();
         cityService.getCities().then(result => setCities(result.data.data))
-    })
+    },[])
 
     return (
         <>
@@ -34,7 +34,7 @@ export default function City() {
                         <div className="h-145-px overflow-y-auto" >
                         {cities.map(city => ( 
                             <div key={city.id}>
-                                <label className="inline-flex items-center cursor-pointer">
+                                <label className="inline-flex items-center cursor-pointer" onClick={() => console.log(city.id)}>
                                     <input
                                         id="customCheckLogin"
                                         type="checkbox"

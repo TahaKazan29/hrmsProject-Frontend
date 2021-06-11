@@ -1,10 +1,19 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
+import { useParams } from "react-router";
 import Footer from "../layouts/Footer/Footer";
 import Navbar from "../layouts/Navbars/IndexNavbar";
+import JobPostService from "../services/jobPostService";
 
-export default function JobPostDetail(props) {
+export default function JobPostDetail() {
 
-     const [post, setPost] = useState(props);
+    let {postId} = useParams();
+
+    const [post, setPost] = useState({});
+
+    useEffect(()=> {
+      let postService = new JobPostService();
+      postService.getPostById(postId).then(result => setPost(result.data.data))
+    },[])
 
 
   return (
@@ -15,7 +24,7 @@ export default function JobPostDetail(props) {
     <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
         <div className="rounded-t bg-lightBlue-500 mb-0 px-6 py-6">
           <div className="text-center flex justify-between">
-            <h6 className="text-white text-xl font-bold">{post.currentPost.positionName}</h6>
+            <h6 className="text-white text-xl font-bold">{post.positionName}</h6>
             <button
               className="bg-red-700 text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
               type="button"
@@ -29,7 +38,7 @@ export default function JobPostDetail(props) {
               Şirket Bilgileri
             </h6>
             <div className="flex flex-wrap">
-                {post.currentPost.companyName}
+                {post.companyName}
             </div>
 
             <hr className="mt-6 border-b-1 border-blueGray-300" />
@@ -38,7 +47,7 @@ export default function JobPostDetail(props) {
               İş Tanımı
             </h6>
             <div className="flex flex-wrap">
-                {post.currentPost.description}             
+                {post.description}             
             </div>
 
             <hr className="mt-6 border-b-1 border-blueGray-300" />
@@ -47,7 +56,7 @@ export default function JobPostDetail(props) {
               Şehir
             </h6>
             <div className="flex flex-wrap">
-                {post.currentPost.cityName}             
+                {post.cityName}             
             </div>
 
             <hr className="mt-6 border-b-1 border-blueGray-300" />
@@ -56,7 +65,7 @@ export default function JobPostDetail(props) {
               Pozisyon Sayısı
             </h6>
             <div className="flex flex-wrap">
-                {post.currentPost.positionCount}             
+                {post.positionCount}             
             </div>
 
             <hr className="mt-6 border-b-1 border-blueGray-300" />
@@ -65,7 +74,7 @@ export default function JobPostDetail(props) {
               Son başvuru tarihi
             </h6>
             <div className="flex flex-wrap">
-                {post.currentPost.lastApplyDate}             
+                {post.lastApplyDate}             
             </div>
         </div>
       </div>

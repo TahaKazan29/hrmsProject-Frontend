@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import IndexNavbar from "../layouts/Navbars/IndexNavbar.jsx";
 import Footer from "../layouts/Footer/Footer.jsx";
 import JobPosition from "./JobPosition.jsx";
 import City from "./City.jsx";
 import WayOfWorking from "./WayOfWorking.jsx";
+import JobPostService from "../services/jobPostService.js";
+import WorkingTime from "./WorkingTime.jsx";
 
-export default function JobPosting(props) {
+export default function JobPosting() {
   
+  const [posts, setPosts] = useState([]);
+
+ 
+
+  useEffect(() => {
+    let postService = new JobPostService();
+    postService.getPosts().then(result => setPosts(result.data.data))
+  },[])
+
+
   function fragmantaion(params) {
     let description = params.slice(0,230);
     return description + "...";
   }  
+
+  // handleChange = (e) => {
+  //   let value = Array.from(e.target.selectedOptions, option => option.value);
+  //   this.setState({values: value});
+  // }
 
   return (
     <>
@@ -76,12 +93,17 @@ export default function JobPosting(props) {
                 <City/>
                 <JobPosition/> 
                 <WayOfWorking/>
+                <WorkingTime/>
+                <div className="sticky bottom-1">
+                  <button className="w-full bg-orange-500 text-white active:bg-orange-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                    <i className="fas fa-search pr-1"></i> Ara
+                  </button>
+                </div>
               </div>
               <div className="md:w-8/12 pt-14">
-              {props.posts.map((post) => (
+              {posts.map((post) => (
                       <Link to={"jobPost/" + post.id}
-                      key={post.id} onClick={() => props.changePost(post)} >
-
+                      key={post.id}>
                 <div
                   className="pt-2 hover:shadow-lg"
                 >
@@ -117,6 +139,9 @@ export default function JobPosting(props) {
                       </div>
                       <div className="flex flex-wrap border-2 border-blueGray-300 pr-1 rounded ml-2">
                           <p className="pl-1 text-sm text-right text-blueGray-500 font-bold">{post.wayOfWorking}</p>
+                      </div>
+                      <div className="flex flex-wrap border-2 border-blueGray-300 pr-1 rounded ml-2">
+                          <p className="pl-1 text-sm text-right text-blueGray-500 font-bold">{post.workingTime}</p>
                       </div>
                       </div>
                      

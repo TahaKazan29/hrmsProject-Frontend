@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -65,26 +66,32 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      >
-                        Hakkımızda
-                      </a>
+                      <Link to=""> 
+                        <p
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        >
+                          Hakkımızda
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      >
-                        Blog
-                      </a>
+                      <Link to="">
+                        <p
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        >
+                          Blog
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://github.com/TahaKazan29"
-                      >
-                        Github
-                      </a>
+                      <Link to="">
+                        <p
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          href="https://github.com/TahaKazan29"
+                        >
+                          Github
+                        </p>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -94,25 +101,31 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      >
-                        Lisans
-                      </a>
+                      <Link to="">
+                        <p
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        >
+                          Lisans
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      >
-                        Gizlilik Politikası
-                      </a>
+                      <Link to="">
+                        <p
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        >
+                          Gizlilik Politikası
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      >
-                        Bizimle İletişime Geçin
-                      </a>
+                      <Link to="">
+                        <p
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        >
+                          Bizimle İletişime Geçin
+                        </p>
+                      </Link>
                     </li>
                   </ul>
                 </div>
