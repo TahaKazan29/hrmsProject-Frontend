@@ -35,9 +35,19 @@ export default function Navbar(props) {
             <li className="flex items-center">
                 <Link
                 className="bg-orange-500 text-white active:bg-orange-600 font-bold text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  to="/personnel/posts/all">
+                    <div className="flex flex-wrap">
+                      <i class="fas fa-plus-square pt-1"></i>
+                      <p className="pl-2">Sistem Personeli</p>
+                    </div>
+                </Link>
+              </li>
+            <li className="flex items-center">
+                <Link
+                className="bg-orange-500 text-white active:bg-orange-600 font-bold text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   to="/shareAnAd">
                     <div className="flex flex-wrap">
-                      <i class="fas fa-search pt-1"></i>
+                      <i class="fas fa-plus-square pt-1"></i>
                       <p className="pl-2">İlan Ver</p>
                     </div>
                 </Link>
@@ -55,7 +65,7 @@ export default function Navbar(props) {
             <li className="flex items-center">
                 <Link
                 className="bg-emerald-500 text-white active:bg-emerald-600 font-bold text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  to="/cv">
+                  to="/resume/personelInformation">
                     <div className="flex flex-wrap">
                       <i className="far fa-address-card pt-1" ></i>
                       <p className="pl-2">Özgeçmiş Oluştur</p>
@@ -77,6 +87,17 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <RegisterDropdown />
               </li>
+              {/* <li className="flex items-center">
+                <Link
+                  to="/auth/login"
+                  className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  type="button"
+                >
+                  <div className="flex flex-wrap">
+                      <p className="">İşveren MENU</p>
+                    </div>
+                </Link>
+              </li> */}
             </ul>
           </div>
         </div>

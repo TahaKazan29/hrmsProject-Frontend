@@ -4,13 +4,21 @@ import reportWebVitals from './reportWebVitals';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./assets/styles/tailwind.css";
 import { BrowserRouter} from 'react-router-dom';
-
 import App from './App';
+import { configureStore } from './store/configureStore';
+import { Provider } from 'react-redux';
+import "react-toastify/dist/ReactToastify.min.css"
+import "react-toastify/dist/ReactToastify.css";
+
+
+const store = configureStore();
 
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
     <App></App>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

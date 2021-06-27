@@ -50,6 +50,7 @@ export default function Login() {
                       placeholder="Şifre"
                     />
                   </div>
+                  
                   <div>
                     <label className="inline-flex items-center cursor-pointer">
                       <input

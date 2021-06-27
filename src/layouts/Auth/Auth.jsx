@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "../../pages/Auth/Login";
 import EmployerForRegister from "../../pages/Auth/EmployerForRegister";
 import JobSeekerForRegister from "../../pages/Auth/JobSeekerForRegister";
-import FooterSmall from "../Footer/FooterSmall";
+import FooterSmall from "../Footers/FooterSmall";
 import Navbar from "../Navbars/IndexNavbar"
 
 

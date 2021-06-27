@@ -1,0 +1,7 @@
+.private {
+    display: none;
+}
+
+.public{
+    display:flex;
+}

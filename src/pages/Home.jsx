@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import IndexNavbar from "../layouts/Navbars/IndexNavbar.jsx";
-import Footer from "../layouts/Footer/Footer.jsx";
+import Footer from "../layouts/Footers/Footer.jsx";
 
 export default function Index() {
   return (

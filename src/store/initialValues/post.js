@@ -1,0 +1,15 @@
+export const postsAll = []
+export const postsFavorite = []
+export const postsActive = []
+export const postsWaitingApproval = []
+export const postsPassive = []
+export const postsRejected = []
+export const postsExpired = []
+export const postsFilter = []
+export const post = {}
+export const message = ''
+export const cityIds = []
+export const wayOfWorkingIds = []
+export const workingTimeIds = []
+export const positionIds=[]
+export const filterElements = {}

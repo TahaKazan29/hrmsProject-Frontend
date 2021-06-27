@@ -1185,6 +1185,7 @@ select {
   background-color: rgba(249, 115, 22, var(--tw-bg-opacity));
 }
 
+
 .bg-red-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
@@ -1361,6 +1362,10 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-10 {
+  border-width: 10px;
 }
 
 .border {
@@ -1655,6 +1660,14 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
   margin: -6rem;
 }
 
+.-m-32 {
+  margin: -8rem;
+}
+
+.-m-40 {
+  margin: -10rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1824,6 +1837,10 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
   margin-left: -1rem;
 }
 
+.-mt-5 {
+  margin-top: -2rem;
+}
+
 .-mt-20 {
   margin-top: -5rem;
 }
@@ -1904,8 +1921,16 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
   min-width: 0px;
 }
 
+.min-w-32 {
+  min-width: 8rem;
+}
+
 .min-w-48 {
   min-width: 12rem;
+}
+
+.min-w-130-px {
+  min-width: 130px;
 }
 
 .min-w-140-px {
@@ -2492,6 +2517,11 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
   color: rgba(100, 116, 139, var(--tw-text-opacity));
 }
 
+.hover\:text-purple-500:hover {
+  --tw-text-opacity: 1;
+color: rgba(139, 92, 246, var(--tw-text-opacity));
+}
+
 .hover\:text-blueGray-700:hover {
   --tw-text-opacity: 1;
   color: rgba(51, 65, 85, var(--tw-text-opacity));
@@ -2531,8 +2561,16 @@ background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
   overflow-wrap: break-word;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-5 {
   width: 1.25rem;
+}
+
+.w-6 {
+  width: 1.50rem;
 }
 
 .w-8 {
@@ -3095,7 +3133,6 @@ border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
   .xl\:mb-0 {
     margin-bottom: 0px;
   }
-
   .xl\:w-3\/12 {
     width: 25%;
   }
